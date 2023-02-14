@@ -9,21 +9,21 @@ const prompt = require('prompt-sync')();
     list = [];
 
     while (num != "*"){
-        num = parseInt(num)
+        num = parseInt(num);
         if (!isNaN(num)){
-            list.push(num)
+            list.push(num);
         }else{
-            console.log("Previous input is not a number (and wasn't added to the list!) Type a number:")
+            console.log("Previous input is not a number (and wasn't added to the list!) Type a number:");
         }
-        num = prompt("")
+        num = prompt("");
     }
 
-    console.log("Sum of Numbers: ")
-    console.log(sumOfList(list) + " \n")
+    console.log("Sum of Numbers: ");
+    console.log(sumOfList(list) + " \n");
 
 
-    console.log("Product of Numbers: ")
-    console.log(productOfList(list) + " \n")
+    console.log("Product of Numbers: ");
+    console.log(productOfList(list) + " \n");
 
 }())
 
@@ -31,15 +31,22 @@ const prompt = require('prompt-sync')();
 function sumOfList(list){
     // returns the sum of the given array
     // sending non-numerical values will cause wonky behavior
-    sum = 0
-    list.forEach((i) => sum += i)
-    return sum
+    sum = 0;
+    list.forEach((i) => sum += i);
+    return sum;
 }
 
 function productOfList(list){
     // returns the product of the given array
     // sending non-numerical values will cause wonky behavior
-    product = 1
-    list.forEach((i) => product *= i)
-    return product
+    product = 1;
+    list.forEach((i) => product *= i);
+    return product;
+}
+
+function reverseList(list){
+    //reverses the given array
+    newList = [];
+    list.forEach(newList.push(list.pop()));
+    return newList;
 }
