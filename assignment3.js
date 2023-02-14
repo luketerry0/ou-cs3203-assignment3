@@ -18,6 +18,9 @@ const prompt = require('prompt-sync')();
         num = prompt("");
     }
 
+    console.log("\nReversed List: ");
+    console.log(reverseList(list) + "\n");
+
     console.log("Sum of Numbers: ");
     console.log(sumOfList(list) + " \n");
 
@@ -47,6 +50,6 @@ function productOfList(list){
 function reverseList(list){
     //reverses the given array
     newList = [];
-    list.forEach(newList.push(list.pop()));
+    list.forEach((e, idx) => {newList.push(list[list.length - idx - 1])});
     return newList;
 }
