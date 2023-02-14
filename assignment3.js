@@ -53,3 +53,5 @@ function reverseList(list){
     list.forEach((e, idx) => {newList.push(list[list.length - idx - 1])});
     return newList;
 }
+
+// This is the change in my code that I needed to make for part 10
