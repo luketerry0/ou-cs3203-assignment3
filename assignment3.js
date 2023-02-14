@@ -43,3 +43,5 @@ function productOfList(list){
     list.forEach((i) => product *= i)
     return product
 }
+
+// This is the change in my code that I needed to make for part 10
